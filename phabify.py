@@ -47,6 +47,6 @@ def json_parse():
 
     	phabJson = json.dumps(x)	
     	
-    	return phabJson, 200
+    	return phabJson
 
     return Response(), 200
