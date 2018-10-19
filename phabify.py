@@ -6,4 +6,8 @@ app = Flask(__name__) #create the Flask app
 
 @app.route('/phabify', methods=['POST']) #GET requests will be blocked
 def phabify():
-    return 'Todo...
+    return 'Todo...'
+
+@app.route('/query-example')
+def query_example():
+    return 'Todo...'
