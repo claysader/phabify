@@ -35,15 +35,16 @@ def json_parse():
     pattern = "[Tt][0-9]{4}"
     matches = re.findall(pattern, text)
     linkText =  "Phab tickets detected: "
-
-    for match in matches:
+    
+    if matches.length() > 0:
+        for match in matches:
     	phabLink = "https://phab.zenysis.com/" + match + " "
     	linkText = linkText + phabLink
 
-    x = {
-    	"text": linkText
-    }s
+	    x = {
+	    	"text": linkText
+	    }
 
-    phabJson = json.dumps(x)
-
-    return phabJson
+    	phabJson = json.dumps(x)	
+    	
+    	return phabJson
