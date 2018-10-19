@@ -22,13 +22,13 @@ def query_example():
 
 	return linkText
 
-@app.route('/form-example')
+@app.route('/test', methods=['POST'])
 def form_example():
-    return 'Todo...'
+    return request
 
 @app.route('/', methods=['POST'])
 def json_parse():
-    req_data = request.get_json()
+   req_data = request.get_json()
 
     text = req_data['text']
 
