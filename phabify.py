@@ -37,7 +37,7 @@ def json_parse():
     matches = re.findall(pattern, text)
     linkText =  "Phab tickets detected: "
 
-    if user != 'Phabify':
+    if len(matches) > 0:
     	for match in matches:
     		phabLink = "https://phab.zenysis.com/" + match + " "
     		linkText = linkText + phabLink
@@ -48,6 +48,6 @@ def json_parse():
 
     	phabJson = json.dumps(x)	
     	
-    	return phabJson 2
+    	return phabJson
 
     return Response(), 200
