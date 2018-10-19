@@ -26,7 +26,7 @@ def query_example():
 def form_example():
     return 'Todo...'
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def json_parse():
     req_data = request.get_json()
 
