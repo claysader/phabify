@@ -16,7 +16,7 @@ def query_example():
 	linkText =  "Phab tickets detected: "
 
 	for match in matches:
-    	phabLink = "phab.zenysis.com/" + match + " "
+		phabLink = "phab.zenysis.com/" + match + " "
     	linkText = linkText + phabLink
 
     return linkText
