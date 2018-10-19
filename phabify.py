@@ -41,9 +41,9 @@ def json_parse():
     		phabLink = "https://phab.zenysis.com/" + match + " "
     		linkText = linkText + phabLink
 
-	    x = {
-	    	"text": linkText
-	    }
+    	x = {
+    		"text": linkText
+    	}
 
     	phabJson = json.dumps(x)	
     	
