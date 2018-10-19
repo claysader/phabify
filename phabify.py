@@ -28,7 +28,7 @@ def form_example():
 
 @app.route('/', methods=['POST'])
 def json_parse():
-   req_data = request.get_json()
+    req_data = request.get_json()
 
     text = req_data['text']
 
