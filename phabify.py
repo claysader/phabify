@@ -19,7 +19,7 @@ def query_example():
 		phabLink = "phab.zenysis.com/" + match + " "
 		linkText = linkText + phabLink
 
-    return linkText
+	return linkText
 
 @app.route('/form-example')
 def form_example():
