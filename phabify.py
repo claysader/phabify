@@ -32,7 +32,7 @@ def json_parse():
 
 #    text = req_data['text']
 
-#    pattern = "[Tt][0-9]{4}"
+    pattern = "[Tt][0-9]{4}"
     matches = re.findall(pattern, request)
     linkText =  "Phab tickets detected: "
 
