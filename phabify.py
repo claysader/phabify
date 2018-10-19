@@ -30,7 +30,7 @@ def form_example():
 def json_parse():
 #    req_data = request.get_json()
 
-    text = request.args.get('text')
+    text = str(request.args.get('text'))
 
     pattern = "[Tt][0-9]{4}"
     matches = re.findall(pattern, text)
