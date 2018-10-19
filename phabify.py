@@ -28,12 +28,12 @@ def form_example():
 
 @app.route('/', methods=['POST'])
 def json_parse():
-    req_data = request.get_json()
+#    req_data = request.get_json()
 
-    text = req_data['text']
+#    text = req_data['text']
 
-    pattern = "[Tt][0-9]{4}"
-    matches = re.findall(pattern, text)
+#    pattern = "[Tt][0-9]{4}"
+    matches = re.findall(pattern, request)
     linkText =  "Phab tickets detected: "
 
     for match in matches:
