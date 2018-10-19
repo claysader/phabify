@@ -42,7 +42,7 @@ def json_parse():
 
     x = {
     	"text": linkText
-    }
+    }s
 
     phabJson = json.dumps(x)
 
