@@ -11,3 +11,6 @@ def phabify():
 @app.route('/query-example', methods=['GET'])
 def query_example():
     return 'Todo...'
+
+if __name__ == '__main__':
+    app.run(debug=True) #run app in debug mode on port 5000
