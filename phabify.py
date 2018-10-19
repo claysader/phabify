@@ -8,6 +8,6 @@ app = Flask(__name__) #create the Flask app
 def phabify():
     return 'Todo...'
 
-@app.route('/query-example')
+@app.route('/query-example', methods=['GET'])
 def query_example():
     return 'Todo...'
