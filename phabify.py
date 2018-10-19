@@ -30,7 +30,7 @@ def form_example():
 def json_parse():
 #    req_data = request.get_json()
 
-    text = str(request.args.get('text'))
+    text = request.form.get('text')
 
     pattern = "[Tt][0-9]{4}"
     matches = re.findall(pattern, text)
@@ -47,4 +47,4 @@ def json_parse():
 
     	phabJson = json.dumps(x)	
     	
-    	return phabJson
+    	return phabJson, 200
