@@ -8,7 +8,7 @@ app = Flask(__name__) #create the Flask app
 @app.route('/query-example')
 def query_example():
 
-	text = "I fixed T4523"
+	text = "I fixed T4523 and t8245"
 
 	pattern = "[Tt][0-9]{4}"
 	matches = re.findall(pattern, text)
