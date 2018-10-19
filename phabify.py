@@ -48,7 +48,7 @@ def json_parse():
 
     	phabJson = json.dumps(x)	
     	
-    	if user != 'Phabify':
-    		return phabJson 2
+    	if user != 'slackbot':
+    		return phabJson
 
     return Response(), 200
