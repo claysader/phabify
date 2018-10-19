@@ -2,6 +2,7 @@
 
 from flask import Flask, request #import main Flask class and request object
 import re
+import json
 
 app = Flask(__name__) #create the Flask app
 
@@ -16,7 +17,7 @@ def query_example():
 	linkText =  "Phab tickets detected: "
 
 	for match in matches:
-		phabLink = "phab.zenysis.com/" + match + " "
+		phabLink = "https://phab.zenysis.com/" + match + " "
 		linkText = linkText + phabLink
 
 	return linkText
@@ -25,6 +26,23 @@ def query_example():
 def form_example():
     return 'Todo...'
 
-@app.route('/json-example')
-def json_example():
-    return 'Todo...'
+@app.route('/')
+def json_parse():
+    req_data = request.get_json()
+
+    text = req_data['text']
+
+    pattern = "[Tt][0-9]{4}"
+	matches = re.findall(pattern, text)
+
+	linkText =  "Phab tickets detected: "
+
+	for match in matches:
+		phabLink = "https://phab.zenysis.com/" + match + " "
+		linkText = linkText + phabLink
+
+	phabJson = {
+		"text": linkText
+	}
+
+	return phabJson
