@@ -17,7 +17,7 @@ def query_example():
 
 	for match in matches:
 		phabLink = "phab.zenysis.com/" + match + " "
-    	linkText = linkText + phabLink
+		linkText = linkText + phabLink
 
     return linkText
 
