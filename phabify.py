@@ -27,17 +27,4 @@ def form_example():
 
 @app.route('/json-example')
 def json_example():
-    req_data = request.get_json()
-
-    text = req_data['text']
-    
-
-    return '''
-           The language value is: {}
-           The framework value is: {}
-           The Python version is: {}
-           The item at index 0 in the example list is: {}
-           The boolean value is: {}'''.format(language, framework, python_version, example, boolean_test)
-
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0') #run app in debug mode on port 5000
+    return 'Todo...'
