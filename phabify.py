@@ -31,12 +31,13 @@ def json_parse():
 #    req_data = request.get_json()
 
     text = request.form.get('text')
+    user = request.form.get('user_name')
 
     pattern = "[Tt][0-9]{4}"
     matches = re.findall(pattern, text)
     linkText =  "Phab tickets detected: "
 
-    if len(matches) > 0:
+    if user != 'Phabify':
     	for match in matches:
     		phabLink = "https://phab.zenysis.com/" + match + " "
     		linkText = linkText + phabLink
@@ -47,6 +48,6 @@ def json_parse():
 
     	phabJson = json.dumps(x)	
     	
-    	return phabJson 2
+    	return phabJson
 
     return Response(), 200
