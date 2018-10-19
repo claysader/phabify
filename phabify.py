@@ -30,10 +30,10 @@ def form_example():
 def json_parse():
 #    req_data = request.get_json()
 
-#    text = req_data['text']
+    text = request.args.get('text')
 
     pattern = "[Tt][0-9]{4}"
-    matches = re.findall(pattern, request)
+    matches = re.findall(pattern, text)
     linkText =  "Phab tickets detected: "
 
     for match in matches:
